@@ -1,0 +1,11 @@
+{
+  "name": "wp-turbulence-website",
+  "version": "0.1.0",
+  "description": "web site to wp-turbulence plugin",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dan McKeown <dmckeown@pacificpelican.us>",
+  "license": "ISC"
+}

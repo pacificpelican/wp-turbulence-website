@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wp-turbulence plugin home page</title>
+    <script src="sb.min.js"></script>
+    <link href="wp-turbulence.css" rel="stylesheet" />
+    <script src="wp-turbulence.js" module></script>
+  </head>
+
+  <style>
+
+@media (min-width: 760px) {
+
+    body {
+      background: hsla(43, 58%, 95%, 1);
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.grid-item {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+}
+img#plane, img#bird {
+  width: calc(10pt + 20vw);
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer#footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main#core a {
+  color: inherit;
+}
+  </style>
+
+  <!-- Template Definitions -->
+  <template name="sb-block">
+    <div
+      style="
+        padding: 1rem;
+        background-color: hsla(43, 58%, 92%, 1);
+        border: 2px solid hsla(17, 48%, 16%, 1);
+        box-shadow: -4px 4px 0px rgba(0, 0, 0, 0.25);
+      "
+    >
+      <slot />
+    </div>
+  </template>
+  <template name="sb-h1">
+    <h1
+      style="
+        margin: 0;
+        font-family: sans-serif;
+        font-weight: bold;
+        width: fit-content;
+        color: hsla(6, 64%, 59%, 1);
+      "
+    >
+      <slot />
+    </h1>
+  </template>
+
+  <!-- Initialize Strawberry -->
+  <script>
+   const data = sb.init();
+  </script>
+
+  <!-- HTML Body -->
+  <body>
+    <header>
+      <h1>WP Turbulence</h1>
+      <nav>
+        <ul>
+          <li><a href="https://danmckeown.info">Home</a></li>
+          <li><a href="https://github.com/pacificpelican/wp-turbulence">GitHub</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="https://pacificio.com/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  
+    <main id="core">
+      <section class="grid-container" id="features">
+        <div class="grid-item">
+          <h2>Make your site shake!</h2>
+          <p>Does your <a href="https://wordpress.org">WordPress</a> site already have an eerie, rickety shake to it?  Well now it can!  <a href="https://github.com/pacificpelican/wp-turbulence">Get the plugin!</a></p>
+        </div>
+        <div class="grid-item">
+          <h2>Made by robots!</h2>
+          <p>This plugin was created in parternship with an LLM!  Because who cares about learning how to write WordPress plugin code!</p>
+        </div>
+        <div class="grid-item">
+          <h2>Most elements will shake!</h2>
+          <p><img src="../assets/logo_with_an_airplane_in_stormy_skies_with_exact_text_ WP_Turbulence-3.png" id="plane" /></p>
+        </div>
+        <div class="grid-item">
+          <h2>Are you ready for these skies?  Contact <a href="https://pacificio">PacificIO</a> for web dev help</h2>
+          <p><img src="../assets/pacificpelican_as_an_isometric_logo_for_the_new_WP_Turbulence_p_7d75488b-544a-4c9b-b48d-1a4f23f9ad5b.jpg" id="bird" /></p>
+        </div>
+      </section>
+    </main>
+  
+    <footer id="footer">
+      <p>&copy; 2024 <a href="https://altaredwood.work">Alta Redwood</a>. All rights reserved.</p>
+    </footer>
+    <!-- Use defined components -->
+    <sb-block>
+      <sb-h1 sb-mark="message">Hello, World!</sb-h1>
+    </sb-block>
+
+    <!-- Update Component -->
+    <script>
+      data.message = 'Whoa, Shaky! ✈️';
+    </script>
+  </body>
+</html>
